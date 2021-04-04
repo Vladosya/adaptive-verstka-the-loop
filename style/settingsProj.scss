@@ -1,0 +1,64 @@
+$cream: #f9f6f1;
+$white: #ffffff;
+$accent: #d7b399;
+$black: #212121;
+
+body {
+   font-family: "Montserrat", sans-serif;
+}
+
+.page {
+   background-color: $cream;
+}
+
+.page-black {
+   background-color: $black;
+}
+
+.page-white {
+   background-color: $white;
+}
+
+.container {
+   width: 100%;
+   max-width: 1110px;
+   margin: 0 auto;
+}
+
+@mixin breakpoint($point) {
+   @if $point == xxl {
+      @media (max-width: 1400px) {
+         @content;
+      }
+   }
+
+   @if $point == xl {
+      @media (max-width: 1200px) {
+         @content;
+      }
+   }
+
+   @if $point == lg {
+      @media (max-width: 992px) {
+         @content;
+      }
+   }
+
+   @if $point == md {
+      @media (max-width: 768px) {
+         @content;
+      }
+   }
+
+   @if $point == sm {
+      @media (max-width: 576px) {
+         @content;
+      }
+   }
+
+   @if $point == xs {
+      @media (max-width: 320px) {
+         @content;
+      }
+   }
+}

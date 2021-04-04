@@ -1,0 +1,1152 @@
+@import './zeroing.scss'
+@import './settingsProj.scss'
+//@import './burgerStyle.scss'
+
+$ten: 10px
+$fourteen: 14px
+$sixteen: 16px
+$eighteen: 18px
+$twenty-one: 21px
+$twenty-four: 24px
+$thirty: 30px
+$thirty-six: 36px
+$forty-two: 42px
+$fifty-five: 55px
+
+.header-block
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding-top: 50px
+
+	@include breakpoint (xl)
+		justify-content: space-around
+
+	@include breakpoint (lg)
+		padding-top: 40px
+
+	@include breakpoint (md)
+		padding-top: 30px
+		justify-content: space-evenly
+
+	@include breakpoint (sm)
+		justify-content: space-evenly
+
+	nav
+		@include breakpoint (lg)
+			display: none
+
+	&__nav
+		display: flex
+
+		a
+			margin-right: 35px
+			font-family: Montserrat
+			font-weight: 500
+			font-size: $fourteen
+			color: #212121
+
+			@include breakpoint (xxl)
+				font-size: 12px
+
+			@include breakpoint (xl)
+				font-size: 10px
+
+	&__logo
+		display: flex
+		align-items: center
+
+		p
+			margin-left: 20px
+			font-family: Montserrat
+			font-weight: 700
+			font-size: $twenty-four
+			letter-spacing: 0.05em
+			text-transform: uppercase
+			color: #212121
+
+			@include breakpoint (xxl)
+				font-size: 20px
+
+			@include breakpoint (xl)
+				font-size: 17px
+
+			@include breakpoint (lg)
+				margin-left: 13px
+				font-size: 14px
+
+			@include breakpoint (md)
+				margin-left: 11px
+				font-size: 12px
+
+			@include breakpoint (sm)
+				margin-left: 6px
+				font-size: 9px
+
+	&__basket
+		display: flex
+		align-items: center
+
+		div
+			margin-left: 15.25px
+
+			@include breakpoint (sm)
+				margin-left: 5.25px
+
+			img
+				@include breakpoint (sm)
+					margin-right: 30px
+
+.burger
+	display: none
+
+	@include breakpoint (lg)
+		display: block
+
+.nav-bar
+	position: absolute
+	background-color: #d7b399
+	top: 0
+	right: 100%
+	height: 100vh
+	width: 250px
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: position 2.9s
+	-webkit-transition: position 2.9s
+	-moz-transition: position 2.9s
+	-ms-transition: position 2.9s
+	-o-transition: position 2.9s
+	z-index: 2
+
+	@include breakpoint (md)
+		width: 100%
+
+.toggle
+	left: 0
+	box-shadow: 1px 0 15px 2px rgba(0, 0, 0, 0.4)
+
+	&-menu
+		position: fixed
+		top: 55px
+		right: 50px
+		width: 40px
+		height: 30px
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		padding: 2px 2px 2px 3px
+		border-radius: 5px
+		cursor: pointer
+		-webkit-border-radius: 5px
+		-moz-border-radius: 5px
+		-ms-border-radius: 5px
+		-o-border-radius: 5px
+
+		@include breakpoint (lg)
+			top: 45px
+
+		@include breakpoint (md)
+			top: 35px
+			right: 10px
+
+		@include breakpoint (sm)
+			width: 35px
+
+.line
+	width: 100%
+	height: 3px
+	border-radius: 5px
+	background-color: #D7B399
+	transition: transform 0.2s ease-out
+	-webkit-transition: transform 0.2s ease-out
+	-moz-transition: transform 0.2s ease-out
+	-ms-transition: transform 0.2s ease-out
+	-o-transition: transform 0.2s ease-out
+
+	.toggle1 &
+		background-color: #000000
+		transform: scale(0.9) rotateZ(-45deg) translate(-6px, 4px)
+
+	.toggle2 &
+		display: none
+
+	.toggle3 &
+		background-color: #000000
+		transform: scale(0.9) rotateZ(45deg) translate(-6px, -4px)
+
+.toggle .toggle-menu
+	background-color: white
+
+.nav-list
+	list-style: none
+
+	&-item
+		text-align: center
+		padding: 10px 0
+
+.nav-link
+	color: #FFFFFF
+	font-size: 22px
+	text-decoration: none
+	position: relative
+	padding-bottom: 4px
+
+	&::before
+		position: absolute
+		content: ''
+		left: 0
+		bottom: 0
+		width: 100%
+		height: 1px
+		background-color: #fff
+		transform: scaleX(0)
+		transition: transform 0.4s ease-in-out
+		transform-origin: left
+		-webkit-transition: transform 0.4s ease-in-out
+		-moz-transition: transform 0.4s ease-in-out
+		-ms-transition: transform 0.4s ease-in-out
+		-o-transition: transform 0.4s ease-in-out
+
+	&:hover::before
+		transform: scaleX(1)
+
+.below-header
+	padding: 126px 0 133px 0
+	display: flex
+
+	@include breakpoint (xxl)
+		padding: 106px 0 113px 0
+
+	@include breakpoint (xl)
+		display: block
+		padding: 100px 0 103px 0
+
+	@include breakpoint (lg)
+		padding: 90px 0 93px 0
+
+	@include breakpoint (md)
+		padding: 70px 0 70px 0
+
+	@include breakpoint (sm)
+		padding: 50px 0 50px 0
+
+.below-info
+	@include breakpoint (xl)
+		text-align: center
+
+	&__text-one
+		font-family: Montserrat
+		font-weight: 400
+		font-size: $thirty
+		line-height: 37px
+		color: #000000
+
+		@include breakpoint (xxl)
+			font-size: 27px
+
+		@include breakpoint (xl)
+			font-size: 24px
+
+		@include breakpoint (lg)
+			font-size: 22px
+
+		@include breakpoint (md)
+			font-size: 19px
+
+		@include breakpoint (sm)
+			font-size: 16px
+
+	&__header
+		min-width: 500px
+		margin-top: 35px
+		font-family: Montserrat
+		font-weight: 700
+		font-size: $fifty-five
+		line-height: 67px
+		color: #000000
+
+		@include breakpoint (xxl)
+			font-size: 50px
+
+		@include breakpoint (xl)
+			font-size: 43px
+			margin-top: 25px
+
+		@include breakpoint (lg)
+			font-size: 38px
+			margin-top: 19px
+
+		@include breakpoint (md)
+			min-width: auto
+			margin-top: 15px
+			font-size: 32px
+
+		@include breakpoint (sm)
+			margin-top: 8px
+			font-size: 25px
+
+	&__btn
+		margin-top: 55px
+		min-width: 240px
+		min-height: 55px
+		background: #D7B399
+		font-family: Montserrat
+		font-weight: 400
+		font-size: 16px
+		line-height: 20px
+		color: #FFFFFF
+
+		@include breakpoint (xxl)
+			font-size: 14px
+
+		@include breakpoint (xl)
+			font-size: 13px
+			margin-top: 45px
+
+		@include breakpoint (lg)
+			font-size: 13px
+			margin-top: 35px
+			min-width: 210px
+			min-height: 52px
+
+		@include breakpoint (md)
+			font-size: 12px
+			margin-top: 30px
+			min-width: 200px
+			min-height: 50px
+
+		@include breakpoint (sm)
+			font-size: 11px
+			margin-top: 20px
+			min-width: 180px
+			min-height: 50px
+
+.below-box
+	position: relative
+
+	@include breakpoint (xl)
+		max-width: 800px
+		margin-top: 50px
+
+	@include breakpoint (sm)
+		margin-top: 40px
+
+	&__number-one
+		position: absolute
+		right: 0
+		font-family: Montserrat
+		font-weight: 700
+		font-size: 24px
+		line-height: 29px
+		text-align: right
+		text-transform: uppercase
+		color: #000000
+
+		@include breakpoint (xxl)
+			font-size: 20px
+
+		@include breakpoint (xl)
+			padding: 20px 20px 0 0
+
+		@include breakpoint (lg)
+			padding: 20px 168px 0 0
+			font-size: 17px
+
+		@include breakpoint (md)
+			padding: 0px 68px 0 0
+			font-size: 14px
+
+		@include breakpoint (sm)
+			font-size: 11px
+
+	&__number-two
+		margin-top: 35px
+		position: absolute
+		right: 0
+		font-family: Montserrat
+		font-weight: 700
+		font-size: 42px
+		text-align: right
+		line-height: 51px
+		letter-spacing: 0.02em
+		text-transform: uppercase
+		color: #D84033
+
+		@include breakpoint (xxl)
+			font-size: 37px
+
+		@include breakpoint (xl)
+			padding: 20px 20px 0 0
+
+		@include breakpoint (lg)
+			padding: 20px 163px 0 0
+			font-size: 33px
+
+		@include breakpoint (md)
+			padding: 0 63px 0 0
+			font-size: 29px
+			margin-top: 25px
+
+		@include breakpoint (sm)
+			font-size: 17px
+			margin-top: 3px
+
+	&__img
+		margin-left: 51px
+
+		@include breakpoint (xl)
+			margin-left: 0
+			text-align: right
+
+		@include breakpoint (lg)
+			display: none
+
+	&__img-two
+		display: none
+
+		@include breakpoint (lg)
+			margin-left: 51px
+			display: block
+			text-align: center
+			z-index: 1
+
+		@include breakpoint (md)
+			display: none
+
+	&__img-three
+		display: none
+
+		@include breakpoint (md)
+			display: block
+			text-align: center
+
+		@include breakpoint (sm)
+			display: none
+
+	&__img-four
+		display: none
+
+		@include breakpoint (sm)
+			display: block
+			text-align: center
+
+.section-black
+	padding: 80px 0 69px 0
+
+	@include breakpoint (xxl)
+		padding: 60px 0 49px 0
+
+	@include breakpoint (xl)
+		padding: 50px 0 39px 0
+
+	@include breakpoint (lg)
+		padding: 40px 0 29px 0
+
+	@include breakpoint (md)
+		padding: 19px 0 19px 0
+
+	@include breakpoint (sm)
+		padding: 10px 0 10px 0
+
+	&__wrap
+		text-align: center
+
+	&__info
+		font-family: Montserrat
+		font-weight: 700
+		font-size: $thirty
+		line-height: 37px
+		color: #FFFFFF
+
+		@include breakpoint (xxl)
+			font-size: 25px
+
+		@include breakpoint (xl)
+			font-size: 22px
+
+		@include breakpoint (lg)
+			font-size: 19px
+
+		@include breakpoint (md)
+			font-size: 15px
+
+		@include breakpoint (sm)
+			font-size: 10px
+
+	&__text
+		margin-top: 23px
+		font-family: Montserrat
+		font-weight: 300
+		font-size: $twenty-one
+		line-height: 26px
+		color: #FFFFFF
+
+		@include breakpoint (xxl)
+			font-size: 18px
+
+		@include breakpoint (xl)
+			font-size: 16px
+
+		@include breakpoint (lg)
+			font-size: 13px
+
+		@include breakpoint (md)
+			margin-top: 14px
+			font-size: 11px
+
+		@include breakpoint (sm)
+			margin-top: 10px
+			font-size: 9px
+
+.section-collection
+	@include breakpoint (xl)
+		flex-wrap: wrap
+
+	&__wrap
+		display: flex
+		justify-content: space-between
+		padding-top: 60px
+
+		@include breakpoint (xxl)
+			justify-content: space-around
+
+		@include breakpoint (xl)
+			flex-wrap: wrap
+			justify-content: end
+
+		@include breakpoint (lg)
+			padding-top: 30px
+
+		@include breakpoint (md)
+			justify-content: center
+
+.block-men
+	display: flex
+
+	@include breakpoint (xl)
+		flex-basis: 100%
+		margin-left: 280px
+
+	@include breakpoint (lg)
+		align-items: center
+		margin-left: 220px
+
+	@include breakpoint (md)
+		margin-right: none
+		margin: 0 auto
+
+	&__wrap
+		margin-left: 20px
+
+	&__header
+		font-family: Montserrat
+		font-weight: 500
+		font-size: $twenty-four
+		line-height: 29px
+		color: #000000
+
+		@include breakpoint (xxl)
+			font-size: 21px
+
+		@include breakpoint (lg)
+			font-size: 16px
+
+		@include breakpoint (md)
+			font-size: 13px
+
+	&__text
+		margin-top: 25px
+		font-family: Montserrat
+		font-weight: 300
+		font-size: $sixteen
+		line-height: 20px
+		color: #000000
+
+		@include breakpoint (xxl)
+			margin-top: 18px
+			font-size: 14px
+
+		@include breakpoint (lg)
+			margin-top: 15px
+			font-size: 12px
+
+		@include breakpoint (md)
+			margin-top: 12px
+			font-size: 10px
+
+	&__btn
+		margin-top: 40px
+		min-width: 80px
+		min-height: 30px
+		background: #D7B399
+		padding-top: 7px
+
+		@include breakpoint (xxl)
+			margin-top: 29px
+
+		@include breakpoint (lg)
+			margin-top: 24px
+
+		@include breakpoint (md)
+			margin-top: 20px
+
+	&__img
+		margin-left: 19px
+
+		@include breakpoint (xxl)
+			margin-left: 15px
+
+.block-women
+	display: flex
+
+	@include breakpoint (xl)
+		margin: 50px 0 0 280px
+
+	@include breakpoint (lg)
+		margin: 40px 0 0 220px
+
+	@include breakpoint (md)
+		margin: 30px 0 0 0
+
+	@include breakpoint (sm)
+		margin: 30px 0 0 20px
+
+	&__header
+		font-family: Montserrat
+		font-weight: 500
+		font-size: $twenty-four
+		line-height: 29px
+		color: #000000
+
+		@include breakpoint (xxl)
+			font-size: 21px
+
+		@include breakpoint (lg)
+			font-size: 16px
+
+		@include breakpoint (md)
+			font-size: 13px
+
+	&__text
+		margin-top: 25px
+		font-family: Montserrat
+		font-weight: 300
+		font-size: $sixteen
+		line-height: 20px
+		color: #000000
+
+		@include breakpoint (xxl)
+			margin-top: 18px
+			font-size: 14px
+
+		@include breakpoint (lg)
+			margin-top: 15px
+			font-size: 12px
+
+		@include breakpoint (md)
+			margin-top: 12px
+			font-size: 10px
+
+	&__btn
+		margin-top: 40px
+		min-width: 80px
+		min-height: 30px
+		background: #D7B399
+		padding-top: 7px
+
+		@include breakpoint (xxl)
+			margin-top: 29px
+
+		@include breakpoint (lg)
+			margin-top: 24px
+
+		@include breakpoint (md)
+			margin-top: 20px
+
+	&__img
+		margin-left: 19px
+
+		@include breakpoint (xxl)
+			margin-left: 15px
+
+.section-model
+	padding: 0 0 152px 0
+
+	@include breakpoint (xxl)
+		padding: 0 0 112px 0
+
+	@include breakpoint (xl)
+		padding: 0 0 100px 0
+
+	@include breakpoint (lg)
+		padding: 0 0 90px 0
+
+	@include breakpoint (md)
+		padding: 0 0 70px 0
+
+	@include breakpoint (sm)
+		padding: 0 0 50px 0
+
+	&__wrap
+		padding-top: 150px
+
+		@include breakpoint (xxl)
+			padding-top: 100px
+
+		@include breakpoint (xl)
+			padding-top: 80px
+
+		@include breakpoint (lg)
+			padding-top: 65px
+
+		@include breakpoint (md)
+			padding-top: 50px
+
+	&__header
+		font-family: Montserrat
+		font-style: normal
+		font-weight: bold
+		font-size: $thirty-six
+		text-transform: uppercase
+		text-align: center
+
+		@include breakpoint (xxl)
+			font-size: 32px
+
+		@include breakpoint (xl)
+			font-size: 29px
+
+		@include breakpoint (lg)
+			font-size: 25px
+
+	&__btn
+		margin-top: 103px
+		text-align: center
+
+		@include breakpoint (xxl)
+			margin-top: 80px
+
+		@include breakpoint (xl)
+			margin-top: 30px
+
+		@include breakpoint (lg)
+			margin-top: 20px
+
+		@include breakpoint (md)
+			margin-top: 10px
+
+		button
+			min-width: 220px
+			min-height: 55px
+			font-family: Montserrat
+			font-weight: 400
+			font-size: $sixteen
+			line-height: 20px
+			color: #FFFFFF
+			background: #D7B399
+			background-image: url('../img/arrow.svg')
+			background-repeat: no-repeat
+			background-position: 175px
+			padding: 5px 40px 0 0
+
+			@include breakpoint (xxl)
+				font-size: 15px
+
+			@include breakpoint (xl)
+				font-size: 13px
+				min-width: 200px
+				min-height: 50px
+				background-position: 156px
+
+			@include breakpoint (md)
+				font-size: 11px
+				min-width: 190px
+
+.model-block
+	display: flex
+	justify-content: space-between
+	margin-top: 103px
+
+	@include breakpoint (xxl)
+		margin-top: 90px
+
+	@include breakpoint (xl)
+		margin-top: 70px
+		flex-wrap: wrap
+
+	@include breakpoint (lg)
+		margin-top: 60px
+
+	@include breakpoint (md)
+		margin-top: 50px
+		flex-wrap: wrap
+
+.model-block-one
+	@include breakpoint (xl)
+		flex-basis: 50%
+		text-align: center
+		margin-bottom: 90px
+
+	@include breakpoint (lg)
+		margin-bottom: 80px
+
+	@include breakpoint (md)
+		flex-basis: 100%
+
+	&__info
+		margin-top: 25px
+		font-family: Montserrat
+		font-weight: 600
+		font-size: $fourteen
+		text-align: center
+		color: #000000
+
+		@include breakpoint (xxl)
+			margin-top: 22px
+			font-size: 12px
+
+		@include breakpoint (lg)
+			margin-top: 19px
+			font-size: 11px
+
+		@include breakpoint (md)
+			margin-top: 16px
+			font-size: 9px
+
+	&__price
+		margin-top: 15px
+		font-family: Montserrat
+		font-weight: bold
+		font-size: $eighteen
+		text-align: center
+		color: #D7B399
+
+		@include breakpoint (xxl)
+			margin-top: 13px
+			font-size: 16px
+
+		@include breakpoint (lg)
+			margin-top: 12px
+			font-size: 16px
+
+		@include breakpoint (md)
+			margin-top: 10px
+			font-size: 14px
+
+.footer-block
+	display: flex
+	padding: 73px 0 80px 0
+
+	@include breakpoint (xxl)
+		padding: 53px 0 60px 0
+
+	@include breakpoint (xl)
+		padding: 43px 0 50px 0
+
+	@include breakpoint (lg)
+		padding: 33px 0 40px 0
+
+	@include breakpoint (md)
+		padding: 23px 0 23px 0
+
+.footer-logo
+	display: flex
+	align-items: center
+
+	p
+		margin-left: 20px
+		font-family: Montserrat
+		font-weight: bold
+		font-size: $twenty-four
+		text-transform: uppercase
+		color: #FFFFFF
+
+		@include breakpoint (xxl)
+			margin-left: 16px
+			font-size: 21px
+
+		@include breakpoint (xl)
+			margin-left: 13px
+			font-size: 18px
+
+		@include breakpoint (lg)
+			margin-left: 11px
+			font-size: 15px
+
+		@include breakpoint (md)
+			margin-left: 7px
+			font-size: 10px
+
+		@include breakpoint (sm)
+			font-size: 9px
+
+.main-items
+	margin-left: 223px
+
+	@include breakpoint (xxl)
+		margin-left: 203px
+
+	@include breakpoint (xl)
+		margin-left: 160px
+
+	@include breakpoint (lg)
+		margin-left: 140px
+
+	@include breakpoint (md)
+		margin-left: 80px
+
+	@include breakpoint (sm)
+		margin-left: 40px
+
+	@include breakpoint (sm)
+		margin-left: 20px
+
+	&__header
+		font-family: Montserrat
+		font-weight: 700
+		font-size: $ten
+		line-height: 12px
+		text-transform: uppercase
+		color: #FFFFFF
+
+		@include breakpoint (xxl)
+			font-size: 9px
+
+		@include breakpoint (xl)
+			font-size: 7px
+
+	&__links
+		margin-top: 20px
+
+		@include breakpoint (xxl)
+			margin-top: 17px
+
+		@include breakpoint (xl)
+			margin-top: 14px
+
+		@include breakpoint (lg)
+			margin-top: 12px
+
+		a
+			font-family: Montserrat
+			font-weight: normal
+			font-size: $fourteen
+			line-height: 22px
+			color: #CBCFD4
+
+			@include breakpoint (xxl)
+				font-size: 12px
+
+			@include breakpoint (xl)
+				font-size: 9px
+
+.footer-category
+	margin-left: 84px
+
+	@include breakpoint (xxl)
+		margin-left: 70px
+
+	@include breakpoint (xl)
+		margin-left: 60px
+
+	@include breakpoint (lg)
+		margin-left: 50px
+
+	@include breakpoint (md)
+		display: none
+
+	&__header
+		font-family: Montserrat
+		font-weight: 700
+		font-size: $ten
+		line-height: 12px
+		text-transform: uppercase
+		color: #FFFFFF
+
+		@include breakpoint (xxl)
+			font-size: 9px
+
+		@include breakpoint (xl)
+			font-size: 7px
+
+	&__links
+		margin-top: 20px
+
+		@include breakpoint (xl)
+			margin-top: 14px
+
+		@include breakpoint (lg)
+			margin-top: 12px
+
+		a
+			font-family: Montserrat
+			font-weight: normal
+			font-size: $fourteen
+			line-height: 22px
+			color: #CBCFD4
+
+			@include breakpoint (xxl)
+				font-size: 12px
+
+			@include breakpoint (xl)
+				font-size: 9px
+
+.useful-items
+	margin-left: 76px
+
+	@include breakpoint (xxl)
+		margin-left: 70px
+
+	@include breakpoint (xl)
+		margin-left: 60px
+
+	@include breakpoint (lg)
+		margin-left: 50px
+
+	@include breakpoint (md)
+		display: none
+
+	&__header
+		font-family: Montserrat
+		font-weight: 700
+		font-size: $ten
+		line-height: 12px
+		text-transform: uppercase
+		color: #FFFFFF
+
+		@include breakpoint (xxl)
+			font-size: 9px
+
+		@include breakpoint (xl)
+			font-size: 7px
+
+	&__links
+		margin-top: 20px
+
+		@include breakpoint (xl)
+			margin-top: 14px
+
+		@include breakpoint (lg)
+			margin-top: 12px
+
+		a
+			font-family: Montserrat
+			font-weight: normal
+			font-size: $fourteen
+			line-height: 22px
+			color: #CBCFD4
+
+			@include breakpoint (xxl)
+				font-size: 12px
+
+			@include breakpoint (xl)
+				font-size: 9px
+
+.social-items
+	margin-left: 53px
+
+	@include breakpoint (xxl)
+		margin-left: 70px
+
+	@include breakpoint (xl)
+		margin-left: 60px
+
+	@include breakpoint (lg)
+		margin-left: 50px
+
+	@include breakpoint (md)
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	@include breakpoint (sm)
+		margin-left: 20px
+
+	&__header
+		font-family: Montserrat
+		font-weight: 700
+		font-size: $ten
+		line-height: 12px
+		text-transform: uppercase
+		color: #FFFFFF
+
+		@include breakpoint (xxl)
+			font-size: 9px
+
+		@include breakpoint (xl)
+			font-size: 7px
+
+	&__links
+		margin-top: 17px
+
+		@include breakpoint (xl)
+			margin-top: 14px
+
+		@include breakpoint (lg)
+			margin-top: 12px
+
+		li
+			display: flex
+			align-items: center
+			font-family: Montserrat
+			font-weight: 400
+			font-size: $fourteen
+			color: #CBCFD4
+
+			@include breakpoint (xxl)
+				font-size: 12px
+
+			@include breakpoint (xl)
+				font-size: 9px
+
+			img
+				margin: 5px
+
+.politic-block
+	display: flex
+	justify-content: space-between
+	padding: 30px 0 30px 0
+
+	@include breakpoint (xxl)
+		padding: 20px 0 20px 0
+
+	@include breakpoint (xl)
+		padding: 15px 0 15px 0
+
+	&__text
+		font-family: Montserrat
+		font-weight: normal
+		font-size: fourteen
+		color: #212121
+
+		@include breakpoint (xxl)
+			font-size: 12px
+
+		@include breakpoint (xl)
+			font-size: 10px
+
+		@include breakpoint (md)
+			font-size: 9px
+
+		@include breakpoint (sm)
+			font-size: 6px
+
+	&__info
+		font-family: Montserrat
+		font-weight: normal
+		font-size: fourteen
+		color: #212121
+
+		@include breakpoint (xxl)
+			font-size: 12px
+
+		@include breakpoint (xl)
+			font-size: 10px
+
+		@include breakpoint (md)
+			font-size: 9px
+
+		@include breakpoint (sm)
+			font-size: 6px

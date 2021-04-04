@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKA,AAAA,IAAI,AAAC,CACF,WAAW,CAAE,wBAAwB,CACvC,AAED,AAAA,KAAK,AAAC,CACH,gBAAgB,CAVX,OAAO,CAWd,AAED,AAAA,WAAW,AAAC,CACT,gBAAgB,CAXX,OAAO,CAYd,AAED,AAAA,WAAW,AAAC,CACT,gBAAgB,CAjBX,IAAO,CAkBd,AAED,AAAA,UAAU,AAAC,CACR,KAAK,CAAE,IAAI,CACX,SAAS,CAAE,MAAM,CACjB,MAAM,CAAE,MAAM,CAChB",
+    "sources": [
+        "../style/settingsProj.scss"
+    ],
+    "names": [],
+    "file": "settingsProj.min.css"
+}

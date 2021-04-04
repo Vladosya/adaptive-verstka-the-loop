@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="./css/index.min.css" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div class="page">
+         <div class="container">
+            <header class="header-block">
+               <nav>
+                  <ul class="header-block__nav">
+                     <li>
+                        <a href="#">Для мужчин</a>
+                     </li>
+                     <li>
+                        <a href="#">Для женщин</a>
+                     </li>
+                     <li>
+                        <a href="#">Для детей</a>
+                     </li>
+                  </ul>
+               </nav>
+               <div class="header-block__logo">
+                  <img src="./img/logo.svg" alt="logo" />
+                  <p>the loop</p>
+               </div>
+               <nav>
+                  <ul class="header-block__nav">
+                     <li>
+                        <a href="#">Оплата</a>
+                     </li>
+                     <li>
+                        <a href="#">Доставка</a>
+                     </li>
+                  </ul>
+               </nav>
+               <div class="header-block__basket">
+                  <img
+                     src="./img/basket.svg"
+                     alt="basket"
+                     class="header-block__basket-one"
+                  />
+                  <div>
+                     <img src="./img/figura.svg" alt="pryam" />
+                  </div>
+               </div>
+            </header>
+
+            <div class="burger">
+               <nav class="header__nav nav-bar">
+                  <div class="toggle-menu" onclick="goUp();">
+                     <div class="line line1"></div>
+                     <div class="line line2"></div>
+                     <div class="line line3"></div>
+                  </div>
+                  <ul class="nav-list">
+                     <li class="nav-list-item">
+                        <a href="#" class="nav-link">Для мужчин</a>
+                     </li>
+                     <li class="nav-list-item">
+                        <a href="#" class="nav-link">Для женщин</a>
+                     </li>
+                     <li class="nav-list-item">
+                        <a href="#" class="nav-link">Для детей</a>
+                     </li>
+                     <li class="nav-list-item">
+                        <a href="#" class="nav-link">Оплата</a>
+                     </li>
+                     <li class="nav-list-item">
+                        <a href="#" class="nav-link">Доставка</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+
+            <div class="below-header">
+               <div class="below-info">
+                  <div class="below-info__text-one">Зимняя распродажа</div>
+                  <div class="below-info__header">СКИДКИ ДО 90%</div>
+                  <button class="below-info__btn">Смотреть модели</button>
+               </div>
+               <div class="below-box">
+                  <strike class="below-box__number-one">9900 ₽</strike>
+                  <p class="below-box__number-two">1900 ₽</p>
+                  <div class="below-box__img">
+                     <img src="./img/boot.png" alt="boots" />
+                  </div>
+                  <div class="below-box__img-two">
+                     <img src="./img/boot-small.png" alt="boots-small" />
+                  </div>
+                  <div class="below-box__img-three">
+                     <img src="./img/boot-little.png" alt="boots-little" />
+                  </div>
+                  <div class="below-box__img-four">
+                     <img
+                        src="./img/boot-very-small.png"
+                        alt="boots-very-small"
+                     />
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="page-black">
+         <div class="section-black">
+            <div class="section-black__wrap">
+               <div class="section-black__info">
+                  БЕСПЛАТНАЯ ДОСТАВКА ОТ 3000₽
+               </div>
+               <div class="section-black__text">
+                  Сделайте заказ и получите подарок!
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="page">
+         <div class="container">
+            <div class="section-collection">
+               <div class="section-collection__wrap">
+                  <div class="block-men">
+                     <div class="block-men__wrap">
+                        <div class="block-men__header">МУЖСКАЯ КОЛЛЕКЦИЯ</div>
+                        <div class="block-men__text">
+                           Обувь, полуверы, костюмы
+                        </div>
+                        <button class="block-men__btn">
+                           <img src="./img/arrow.svg" alt="arrow-men" />
+                        </button>
+                     </div>
+                     <div class="block-men__img">
+                        <img src="./img/man-one.png" alt="man-one" />
+                     </div>
+                  </div>
+                  <div class="block-women">
+                     <div class="block-women__wrap">
+                        <div class="block-women__header">МУЖСКАЯ КОЛЛЕКЦИЯ</div>
+                        <div class="block-women__text">
+                           Обувь, полуверы, костюмы
+                        </div>
+                        <button class="block-women__btn">
+                           <img src="./img/arrow.svg" alt="arrow-women" />
+                        </button>
+                     </div>
+                     <div class="block-women__img">
+                        <img src="./img/woman-one.png" alt="women-one" />
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="page-white">
+         <div class="container">
+            <div class="section-model">
+               <div class="section-model__wrap">
+                  <h2 class="section-model__header">Новые модели</h2>
+                  <div class="model-block">
+                     <div class="model-block-one">
+                        <div class="model-block-one__img">
+                           <img src="./img/woman-two.png" alt="woman-two" />
+                        </div>
+                        <div class="model-block-one__info">
+                           Коктейльное <br />
+                           платье
+                        </div>
+                        <div class="model-block-one__price">₽ 40 000</div>
+                     </div>
+                     <div class="model-block-one">
+                        <div class="model-block-one__img">
+                           <img src="./img/man-two.png" alt="man-two" />
+                        </div>
+                        <div class="model-block-one__info">
+                           Коктейльное <br />
+                           платье
+                        </div>
+                        <div class="model-block-one__price">₽ 40 000</div>
+                     </div>
+                     <div class="model-block-one">
+                        <div class="model-block-one__img">
+                           <img src="./img/woman-two.png" alt="woman-two" />
+                        </div>
+                        <div class="model-block-one__info">
+                           Коктейльное <br />
+                           платье
+                        </div>
+                        <div class="model-block-one__price">₽ 40 000</div>
+                     </div>
+                     <div class="model-block-one">
+                        <div class="model-block-one__img">
+                           <img src="./img/man-two.png" alt="man-two" />
+                        </div>
+                        <div class="model-block-one__info">
+                           Коктейльное <br />
+                           платье
+                        </div>
+                        <div class="model-block-one__price">₽ 40 000</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="section-model__btn">
+                  <button>ВСЕ МОДЕЛИ</button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="page-black">
+         <div class="container">
+            <div class="footer-block">
+               <div class="footer-logo">
+                  <img src="./img/logo-footer.svg" alt="logo-footer" />
+                  <p>the loop</p>
+               </div>
+               <div class="main-items">
+                  <div class="main-items__header">Основные ссылки</div>
+                  <ul class="main-items__links">
+                     <li>
+                        <a href="#">О компании</a>
+                     </li>
+                     <li>
+                        <a href="#">Каталог</a>
+                     </li>
+                     <li>
+                        <a href="#">Доставка</a>
+                     </li>
+                     <li>
+                        <a href="#">Оплата</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="footer-category">
+                  <div class="footer-category__header">Категории</div>
+                  <ul class="footer-category__links">
+                     <li>
+                        <a href="#">Мужская одежда</a>
+                     </li>
+                     <li>
+                        <a href="#">Женская одежда</a>
+                     </li>
+                     <li>
+                        <a href="#">Детская одежда</a>
+                     </li>
+                     <li>
+                        <a href="#">Для животных</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="useful-items">
+                  <div class="useful-items__header">Полезные ссылки</div>
+                  <ul class="useful-items__links">
+                     <li>
+                        <a href="#">Таблица размеров</a>
+                     </li>
+                     <li>
+                        <a href="#">Блог о моде</a>
+                     </li>
+                     <li>
+                        <a href="#">Наша миссия</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="social-items">
+                  <div class="social-items__header">Соц сети</div>
+                  <ul class="social-items__links">
+                     <li>
+                        <img src="./img/vk.svg" alt="vk" />
+                        VK.com
+                     </li>
+                     <li>
+                        <img src="./img/facebook.svg" alt="facebook" />
+                        Facebook
+                     </li>
+                     <li>
+                        <img src="./img/instagram.svg" alt="instagram" />
+                        Instagram
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="page-white">
+         <div class="container">
+            <div class="politic-block">
+               <div class="politic-block__text">
+                  Copyright © 2019. Все права защищены
+               </div>
+               <div class="politic-block__info">Политика приватности</div>
+            </div>
+         </div>
+      </div>
+   </body>
+
+   <script>
+      var toggleButton = document.querySelector(".toggle-menu");
+      var navBar = document.querySelector(".nav-bar");
+      toggleButton.addEventListener("click", function () {
+         navBar.classList.toggle("toggle");
+      });
+
+      var timeOut;
+      function goUp() {
+         var top = Math.max(
+            document.body.scrollTop,
+            document.documentElement.scrollTop
+         );
+         if (top > 0) {
+            window.scrollBy(0, -100);
+            timeOut = setTimeout("goUp()", 20);
+         } else clearTimeout(timeOut);
+      }
+   </script>
+</html>
